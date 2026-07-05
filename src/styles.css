@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+/* 🌈 Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* 🌌 Global Background */
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    color:#e5e7eb;
+
+    background:
+    linear-gradient(
+        rgba(5,8,20,.78),
+        rgba(5,8,20,.82)
+    ),
+    url("https://wallpapercave.com/wp/wp6244231.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    min-height:100vh;
+}
+
+/* Optional dark overlay for every page */
+.page-wrapper{
+    min-height:100vh;
+    background:rgba(0,0,0,.12);
+}

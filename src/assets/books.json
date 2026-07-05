@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "category": "Self Help",
+    "rating": 4.8,
+    "image": "assets/book1.jpg",
+    "description": "Tiny changes, remarkable results."
+  },
+  {
+    "id": 2,
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "category": "Programming",
+    "rating": 4.7,
+    "image": "assets/book2.jpg",
+    "description": "How to write clean software code."
+  },
+  {
+    "id": 3,
+    "title": "Ikigai",
+    "author": "Héctor García",
+    "category": "Lifestyle",
+    "rating": 4.5,
+    "image": "assets/book3.jpg",
+    "description": "Japanese secret to happiness."
+  }
+]

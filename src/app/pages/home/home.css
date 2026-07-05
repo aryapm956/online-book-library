@@ -1,0 +1,100 @@
+/* 🌌 Global Home Background */
+body {
+  background: radial-gradient(circle at top, #0b1220, #020617);
+  color: #e2e8f0;
+}
+
+/* 🏠 Hero Container */
+.home-hero {
+  padding: 70px 20px;
+}
+
+/* ⚡ Neon Title */
+.glow-title {
+  color: #f5d36c;
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+
+  text-shadow:
+    0 0 6px rgba(245, 211, 108, 0.4),
+    0 0 18px rgba(245, 211, 108, 0.25),
+    0 0 30px rgba(255, 215, 0, 0.15);
+}
+
+/* ✨ Tagline */
+.tagline {
+  font-size: 1.4rem;
+  text-align: center;
+  color: #cbd5e1;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+/* 📖 Description */
+.description {
+  max-width: 800px;
+  margin: 15px auto 40px auto;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #94a3b8;
+}
+
+/* 🧊 Glass Carousel Card */
+.hero-card {
+  margin-top: 30px;
+  padding: 25px;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(0, 245, 255, 0.25);
+
+  box-shadow:
+    0 0 20px rgba(0, 245, 255, 0.15),
+    inset 0 0 10px rgba(0, 245, 255, 0.05);
+
+  transition: all 0.3s ease;
+}
+
+/* 🔥 Hover Glow Effect */
+.hero-card:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 0 35px rgba(0, 245, 255, 0.35),
+    0 0 80px rgba(0, 140, 255, 0.2);
+}
+
+/* 📚 Optional Section Divider Glow */
+.home-hero::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 3px;
+  margin: 40px auto 0;
+  background: linear-gradient(90deg, #00f5ff, #008cff);
+  border-radius: 10px;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+
+  .glow-title {
+    font-size: 2.2rem;
+  }
+
+  .tagline {
+    font-size: 1.1rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+
+  .hero-card {
+    padding: 15px;
+  }
+}

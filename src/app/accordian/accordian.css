@@ -1,0 +1,179 @@
+/* ===== Neon BookVerse Accordion ===== */
+
+.accordion{
+    --bs-accordion-bg: transparent;
+    --bs-accordion-border-width:0;
+    --bs-accordion-border-radius:18px;
+}
+
+/* Card */
+
+.accordion-item{
+
+    background:rgba(18,22,45,.70);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(0,255,255,.18);
+
+    border-radius:18px !important;
+
+    margin-bottom:18px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,.35),
+    0 0 12px rgba(0,255,255,.08);
+
+    transition:.35s ease;
+}
+
+.accordion-item:hover{
+
+    transform:translateY(-4px);
+
+    border-color:#00f5ff;
+
+    box-shadow:
+    0 0 20px rgba(0,255,255,.30),
+    0 0 45px rgba(139,92,246,.15);
+
+}
+
+/* Header */
+
+.accordion-button{
+
+    background:transparent !important;
+
+    color:#ffffff !important;
+
+    font-family:'Orbitron',sans-serif;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    letter-spacing:.5px;
+
+    padding:18px 22px;
+
+    box-shadow:none !important;
+
+}
+
+/* Opened */
+
+.accordion-button:not(.collapsed){
+
+    color:#00f5ff !important;
+
+    background:linear-gradient(90deg,
+                rgba(0,245,255,.08),
+                rgba(124,58,237,.08));
+
+    text-shadow:0 0 10px rgba(0,245,255,.7);
+
+}
+
+/* Remove Bootstrap Arrow */
+
+.accordion-button::after{
+
+    filter:brightness(0) invert(1);
+
+    transition:.4s;
+
+}
+
+/* Glow Arrow */
+
+.accordion-button:not(.collapsed)::after{
+
+    transform:rotate(-180deg);
+
+    filter:
+    brightness(1.5)
+    drop-shadow(0 0 10px cyan);
+
+}
+
+/* Body */
+
+.accordion-body{
+
+    background:rgba(255,255,255,.02);
+
+    color:#dbeafe;
+
+    padding:20px 28px;
+
+    font-size:.97rem;
+
+    line-height:1.8;
+
+}
+
+/* List */
+
+.accordion-body ul{
+
+    margin:0;
+
+    padding-left:20px;
+
+}
+
+.accordion-body li{
+
+    list-style:none;
+
+    margin:12px 0;
+
+    position:relative;
+
+    transition:.3s;
+
+}
+
+.accordion-body li::before{
+
+    content:"✦";
+
+    color:#00f5ff;
+
+    margin-right:10px;
+
+}
+
+.accordion-body li:hover{
+
+    color:#00f5ff;
+
+    transform:translateX(6px);
+
+}
+
+/* Scroll Animation */
+
+.accordion-collapse{
+
+    transition:all .5s ease;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.accordion-button{
+
+    font-size:.9rem;
+
+    padding:16px;
+
+}
+
+}

@@ -1,0 +1,83 @@
+<div class="container mt-5">
+
+  @if (bookData.volumeInfo) {
+    <div class="row align-items-center">
+
+        <!-- Book Cover -->
+
+        <div class="col-lg-5 text-center">
+
+            <img
+            [src]="bookData.volumeInfo.imageLinks?.thumbnail"
+            class="img-fluid book-cover"
+            [alt]="bookData.volumeInfo.title">
+
+        </div>
+
+        <!-- Book Details -->
+
+        <div class="col-lg-7">
+
+            <h1 class="book-title">
+                {{ bookData.volumeInfo.title }}
+            </h1>
+
+            <h5 class="author">
+                👤 {{ bookData.volumeInfo.authors?.join(', ') }}
+            </h5>
+
+            <p class="publisher">
+                📖 {{ bookData.volumeInfo.publisher }}
+            </p>
+
+            <p>
+                📅 Published :
+                {{ bookData.volumeInfo.publishedDate }}
+            </p>
+
+            <p>
+                📄 Pages :
+                {{ bookData.volumeInfo.pageCount }}
+            </p>
+
+            <p>
+                ⭐ Rating :
+                {{ bookData.volumeInfo.averageRating || 'Not Rated' }}
+            </p>
+
+            <hr>
+
+            <p class="description">
+
+                {{ bookData.volumeInfo.description }}
+
+            </p>
+
+            <div class="mt-4">
+
+                <a
+                [href]="bookData.volumeInfo.previewLink"
+                target="_blank"
+                class="btn btn-primary me-3">
+
+                    📖 Preview
+
+                </a>
+
+                <a
+                [href]="bookData.saleInfo?.buyLink"
+                target="_blank"
+                class="btn btn-warning">
+
+                    🛒 Buy Book
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+  }
+
+</div>
